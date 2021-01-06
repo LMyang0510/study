@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/showdown.min.js"></script>
-
     <script type="text/javascript">
         $(function(){
             var converter = new showdown.Converter();
             $(".showMD").click(function () {
-                $.get($(this).val(), function (data) {
+                var path = $(this).val();
+                console.log(path);
+                $.get(path, function (data) {
+                    console.log(data);
                     $("#view").html(converter.makeHtml(data));
                 });
             })
