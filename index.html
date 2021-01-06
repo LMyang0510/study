@@ -10,7 +10,7 @@
         $(function(){
             var converter = new showdown.Converter();
             $(".showMD").click(function () {
-                var path = $(this).value();
+                var path = $(this).text();
                 console.log(path);
                 $.get(path, function (data) {
                     console.log(data);
