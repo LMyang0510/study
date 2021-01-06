@@ -9,8 +9,8 @@
     <script type="text/javascript">
         $(function(){
             var converter = new showdown.Converter();
-            $(".showMD").click(function () {
-                var path = $(this).val();
+            $(".showMD").onclick(function () {
+                var path = $(this).value();
                 console.log(path);
                 $.get(path, function (data) {
                     console.log(data);
