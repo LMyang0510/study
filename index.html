@@ -9,7 +9,7 @@
     <script type="text/javascript">
         $(function(){
             var converter = new showdown.Converter();
-            $(".showMD").onclick(function () {
+            $(".showMD").click(function () {
                 var path = $(this).value();
                 console.log(path);
                 $.get(path, function (data) {
