@@ -10,18 +10,21 @@
         $(function(){
             var converter = new showdown.Converter();
             $(".showMD").click(function () {
-                var path = $(this).text();
-                console.log(path);
-                $.get("./" + path, function (data) {
+                $.get($(this).text(), function (data) {
                     console.log(data);
-                    $("#view").html(converter.makeHtml(data));
+                    $("#text").text(data).removeAttr("hidden");
+                    $("#md").html(converter.makeHtml(data)).removeAttr("hidden");
                 });
-            })
+            });
+            $("#text textarea").change(function () {
+                console.log("变更原文件内容，重新生成MD预览");
+                $("#md").html(converter.makeHtml($(this).text()));
+            });
         })
     </script>
 </head>
 <body>
-<div id="view">
+<div id="view" >
     <h2>Spring相关</h2>
     <div>
         <div><a class="showMD" href="javascript:void(0)" >spring-IoC.md</a></div>
@@ -30,6 +33,12 @@
     <div>
         <div><a class="showMD" href="javascript:void(0)">mybatis.md</a></div>
     </div>
+</div>
+<div id="text" align="left" hidden="hidden">
+    <textarea placeholder="原文件内容"></textarea>
+</div>
+<div id="md" align="right" hidden="hidden">
+    <textarea placeholder="MarkDown内容"></textarea>
 </div>
 </body>
 </html>
