@@ -12,7 +12,7 @@
             $(".showMD").click(function () {
                 $.get($(this).text(), function (data) {
                     console.log(data);
-                    $("#text").text(data).removeAttr("hidden");
+                    $("#text textarea").text(data).removeAttr("hidden");
                     $("#md").html(converter.makeHtml(data)).removeAttr("hidden");
                 });
             });
@@ -37,7 +37,7 @@
 </div>
 <div>
     <div id="text" align="left" hidden="hidden" style="display: inline">
-        <input placeholder="原文件内容" />
+        <textarea placeholder="原文件内容"></textarea>
     </div>
     <div id="md" align="right" hidden="hidden" style="display: inline">
         <div></div>
