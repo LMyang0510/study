@@ -8,8 +8,9 @@
     <script type="text/javascript">
         $(function(){
           $(".showMD").click(function () {
-              $.get("./" + $(this).val(), function (data) {
-                  $("#view").html(new showdown.Converter().makeHtml(data));
+              $.get($(this).val(), function (data) {
+                  var converter = new showdown.Converter();
+                  $("#view").html(converter.makeHtml(data));
               });
           })
         })
@@ -20,10 +21,12 @@
     <h2>Spring相关</h2>
     <div>
         <div><a class="showMD" href="javascript:void(0)" >spring/spring-IoC.md</a></div>
+        <div><a href="spring/spring-IoC.md" >spring/spring-IoC.md</a></div>
     </div>
     <h2>Mybatis相关</h2>
     <div>
-        <div><a class="showMD" href="javascript:void(0)">mybatis.md</a></div>
+        <div><a class="showMD" href="javascript:void(0)">mybatis/mybatis.md</a></div>
+        <div><a href="mybatis/mybatis.md">mybatis/mybatis.md</a></div>
     </div>
 </div>
 </body>
