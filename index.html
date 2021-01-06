@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/showdown.min.js"></script>
     <script type="text/javascript">
@@ -14,12 +13,13 @@
                 $.get($(this).text(), function (data) {
                     console.log(data);
                     $("#text textarea").text(data).removeAttr("hidden");
-                    $("#md").html(converter.makeHtml(data)).removeAttr("hidden");
+                    $("#md html tbody").html(converter.makeHtml(data));
+                    $("#md").removeAttr("hidden");
                 });
             });
             $("#text textarea").change(function () {
                 console.log("变更原文件内容，重新生成MD预览");
-                $("#md").html(converter.makeHtml($(this).val()));
+                $("#md html tbody").html(converter.makeHtml($(this).val()));
             });
         })
     </script>
