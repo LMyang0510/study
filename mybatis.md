@@ -5,7 +5,7 @@
     免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作，大大简化了开发工作。
 
 ## 2. 基本构成
-![mybatis的构成](/mybatis/resource/mybatis的构成.png)
+![mybatis的构成](resource/mybatis_基本构成.png)
 * SqlSessionFactoryBuilder
    </br>根据配置信息等多种方式生成 SqlSessionFactory 工厂对象。
 * SqlSessionFactory
@@ -19,4 +19,4 @@
     Mybatis 应用都是以 SqlSessionFactory 的实力为中心的。SqlSessionFactory 则由 SqlSessionFactoryBuilder 获得。
     SqlSessionFactoryBuilder 根据 XML 配置文件生成的 Configuration 对象构建 SqlSessionFactory 实例 DefaultSqlSessionFactory。
 
-![两个SqlSessionFactory实现类的关系图](/mybatis/resource/两个SqlSessionFactory实现类的关系图.png)
+![两个SqlSessionFactory实现类的关系图](resource/mybatis_两个SqlSessionFactory实现类的关系图.png)

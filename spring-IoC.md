@@ -14,7 +14,7 @@
 
 ### 2. 使用IOC前后对比图
 1. 传统应用程序示意图
-   </br>![传统应用程序示意图.png](/spring/resource/传统应用程序示意图.png)
+   </br>![传统应用程序示意图.png](resource/spring_IoC_传统应用程序示意图.png)
 2. IoC/DI容器后程序结构示意图
-   </br>![IoC/DI容器后程序结构示意图.png](/spring/resource/IoC_DI容器后程序结构示意图.png)
+   </br>![IoC/DI容器后程序结构示意图.png](resource/spring_IoC_容器化后程序结构示意图.png)
 
