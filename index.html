@@ -13,13 +13,13 @@
                 $.get($(this).text(), function (data) {
                     console.log(data);
                     $("#text textarea").text(data).removeAttr("hidden");
-                    $("#md html tbody").html(converter.makeHtml(data));
+                    $("#md html body").html(converter.makeHtml(data));
                     $("#md").removeAttr("hidden");
                 });
             });
             $("#text textarea").change(function () {
                 console.log("变更原文件内容，重新生成MD预览");
-                $("#md html tbody").html(converter.makeHtml($(this).val()));
+                $("#md html body").html(converter.makeHtml($(this).val()));
             });
         })
     </script>
