@@ -7,12 +7,12 @@
     <script type="text/javascript" src="js/showdown.min.js"></script>
     <script type="text/javascript">
         $(function(){
-          $(".showMD").click(function () {
-              $.get($(this).val(), function (data) {
-                  var converter = new showdown.Converter();
-                  $("#view").html(converter.makeHtml(data));
-              });
-          })
+            var converter = new showdown.Converter();
+            $(".showMD").click(function () {
+                $.get($(this).val(), function (data) {
+                    $("#view").html(converter.makeHtml(data));
+                });
+            })
         })
     </script>
 </head>
