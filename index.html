@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"/>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/showdown.min.js"></script>
     <script type="text/javascript">
-        $(function(){
+        $(function () {
             var converter = new showdown.Converter();
             $(".showMD").click(function () {
                 $.get($(this).text(), function (data) {
@@ -16,9 +17,9 @@
                     $("#md").html(converter.makeHtml(data)).removeAttr("hidden");
                 });
             });
-            $("#text input").change(function () {
+            $("#text textarea").change(function () {
                 console.log("变更原文件内容，重新生成MD预览");
-                $("#md div").html(converter.makeHtml($(this).val()));
+                $("#md").html(converter.makeHtml($(this).val()));
             });
         })
     </script>
@@ -35,13 +36,9 @@
     <h2>Mybatis相关</h2>
     <div><a class="showMD" href="javascript:void(0)">mybatis.md</a></div>
 </div>
-<div>
-    <div id="text" align="left" hidden="hidden" style="display: inline">
-        <textarea placeholder="原文件内容"></textarea>
-    </div>
-    <div id="md" align="right" hidden="hidden" style="display: inline">
-        <div></div>
-    </div>
+<div id="text">
+    <textarea placeholder="xxx" hidden="hidden"></textarea>
 </div>
+<iframe id="md" hidden="hidden"></iframe>
 </body>
 </html>
