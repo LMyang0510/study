@@ -12,7 +12,12 @@
             $(".showMD").click(function () {
                 $.get($(this).text(), function (data) {
                     console.log(data);
-                    $("#md").html(converter.makeHtml(data));
+                    $("#view").html(converter.makeHtml(data));
+                });
+            });
+            $(".showText").click(function () {
+                $.get($(this).text(), function (data) {
+                    $("#view").text(data);
                 });
             });
         })
@@ -24,12 +29,14 @@
     </style>
 </head>
 <body>
-<div id="view">
+<div>
     <h2>Spring相关</h2>
+    <div><a class="showText" href="javascript:void(0)">spring-IoC.md</a></div>
     <div><a class="showMD" href="javascript:void(0)">spring-IoC.md</a></div>
     <h2>Mybatis相关</h2>
+    <div><a class="showText" href="javascript:void(0)">mybatis.md</a></div>
     <div><a class="showMD" href="javascript:void(0)">mybatis.md</a></div>
 </div>
-<div id="md"></div>
+<div id="view"></div>
 </body>
 </html>

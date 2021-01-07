@@ -5,14 +5,10 @@
 > </br>免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作，大大简化了开发工作。
 
 ## 2. 基本构成
-* SqlSessionFactoryBuilder
-  > 根据配置信息等多种方式生成 SqlSessionFactory 工厂对象。
-* SqlSessionFactory
-  > 依靠工厂对象生成 SqlSession 会话。
-* SqlSession
-  > 一个既可以发送SQL去执行并返回结果，也可以获取 Mapper 的接口。
-* SQL Mapper
-  > Mybatis 新设计的组件，有 Java 接口和对应 XML 文件（或注解）构成，需要给出对应的 SQL 和映射规则。
+* SqlSessionFactoryBuilder: 根据配置信息等多种方式生成 SqlSessionFactory 工厂对象。
+* SqlSessionFactory: 依靠工厂对象生成 SqlSession 会话。
+* SqlSession: 一个既可以发送SQL去执行并返回结果，也可以获取 Mapper 的接口。
+* SQL Mapper: 新设计的组件，有 Java 接口和对应 XML 文件（或注解）构成，需要给出对应的 SQL 和映射规则。
 
 ![mybatis的构成](http://www.lmyang.top/file/study/resource/mybatis_基本构成.png)
 
