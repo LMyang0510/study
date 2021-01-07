@@ -14,10 +14,10 @@
 * SQL Mapper
   > Mybatis 新设计的组件，有 Java 接口和对应 XML 文件（或注解）构成，需要给出对应的 SQL 和映射规则。
 
-![mybatis的构成](resource/mybatis_基本构成.png)
+![mybatis的构成](http://www.lmyang.top/file/study/resource/mybatis_基本构成.png)
 
 ### 2.1 构建 SqlSessionFactory
 > Mybatis 应用都是以 SqlSessionFactory 的实力为中心的。SqlSessionFactory 则由 SqlSessionFactoryBuilder 获得。
 > </br>SqlSessionFactoryBuilder 根据 XML 配置文件生成的 Configuration 对象构建 SqlSessionFactory 实例。
 
-![两个SqlSessionFactory实现类的关系图](resource/mybatis_两个SqlSessionFactory实现类的关系图.png)
+![两个SqlSessionFactory实现类的关系图](http://www.lmyang.top/file/study/resource/mybatis_两个SqlSessionFactory实现类的关系图.png)
